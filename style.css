@@ -2,9 +2,6 @@
   --colorPurple: #5e02ba;
 }
 #wrap {
-}
-
-body {
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -51,23 +48,48 @@ main.active {
 }
 
 .tag-pitAndTitle.active {
-  top: 13vh;
-  transform: scale(3);
+  top: 8vh;
 }
 
 .pit {
   width: 30px;
-  height: 30px;
   padding: 25px 0;
   z-index: 99999;
+  transition: 0.8s ease-in-out;
 }
 
-.tag div:first-child span {
+.pit.active {
+  transform: scale(3);
+}
+
+.title {
   font-size: 32px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 900;
   color: var(--colorPurple);
+  transition: 0.5s ease-in-out;
+}
+
+.title.active {
+  opacity: 0;
+}
+
+.title-hidden {
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  color: var(--colorPurple);
+  position: absolute;
+  top: 8vh;
+  left: 12vh;
+  opacity: 0;
+  transition: 0.8s 0.8s ease-in-out;
+}
+
+.title-hidden.active {
+  opacity: 1;
 }
 
 .tag-paragraph {
@@ -119,6 +141,7 @@ main.active {
 .tag-hidden_container {
   opacity: 0;
   display: none;
+  margin-top: 500px;
 }
 
 .tag-hidden_container.active {
@@ -134,7 +157,7 @@ main.active {
     position: relative;
     top: 0;
     width: 100%;
-    border-radius: 150px 600px 150px 150px;
+    border-radius: 150px 500px 150px 150px;
   }
 }
 
@@ -143,7 +166,7 @@ main.active {
   }
   to {
     height: 300vh;
-    border-radius: 150px 600px 150px 600px;
+    border-radius: 150px 500px 150px 150px;
   }
 }
 
