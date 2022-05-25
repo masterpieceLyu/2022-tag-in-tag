@@ -1,0 +1,125 @@
+:root {
+}
+
+#wrap {
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #5e02ba;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+main.active {
+  /* height: 200vh; */
+}
+
+.tag {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+
+  height: 720px;
+  overflow: hidden;
+  border-radius: 60px 160px 60px 160px;
+  background-color: aliceblue;
+  transition: 1s ease-in-out;
+}
+
+.tag div:first-child {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pit {
+  width: 30px;
+  height: 30px;
+  padding: 25px 0;
+}
+
+.tag div:first-child span {
+  font-size: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  color: #5e02ba;
+}
+
+.tag div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag p {
+  width: 250px;
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 14px;
+  line-height: 1.3rem;
+  font-family: sans-serif;
+  margin-top: 5px;
+}
+
+.barcode {
+  background-image: url(files/barcode.svg);
+  position: absolute;
+  bottom: 20px;
+  display: inline-block;
+  width: 200px;
+  height: 80px;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.barcode:hover {
+  background-image: url(files/barcode-hover.svg);
+  transform: scale(1.03);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.tag.active {
+  transform: scaleX(4) scaleY(3);
+  /* animation: tagGrowWidth 0.7s ease-in-out forwards,
+    tagGrowHeight 0.7s 0.7s ease-in-out forwards; */
+}
+
+/* @keyframes tagGrowWidth {
+  from {
+  }
+
+  to {
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    border-radius: 150px 500px 150px 150px;
+  }
+}
+
+@keyframes tagGrowHeight {
+  from {
+  }
+  to {
+    height: 200vh;
+    border-radius: 150px 500px 150px 500px;
+  }
+} */
