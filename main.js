@@ -1,5 +1,6 @@
 const Main = document.querySelector("#main");
 const HiddenContainer = document.querySelector(".tag-hidden_container");
+let tagSection = document.querySelectorAll(".tag-section");
 let barCode = document.querySelector(".barcode");
 let tag = document.querySelector(".tag");
 let pit = document.querySelector(".pit");
@@ -12,6 +13,9 @@ function clickBarCode() {
   Main.classList.toggle("active");
   HiddenContainer.classList.toggle("active");
   tag.classList.toggle("active");
+  tagSection[1].classList.toggle("active");
+  tagSection[2].classList.toggle("active");
+  tagSection[3].classList.toggle("active");
   pitAndTitle.classList.toggle("active");
   paragraphInMainTag.classList.toggle("active");
   barCode.classList.toggle("active");
