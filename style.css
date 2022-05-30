@@ -17,7 +17,6 @@ body {
 }
 
 main {
-  position: relative;
   width: 100%;
   height: 100%;
   transition: 0.8s 0.8s ease-in-out;
@@ -46,7 +45,7 @@ main.active {
 
 .tag.active {
   position: absolute;
-  top: 0;
+  top: 10vh;
   left: 4%;
   transform: translate(0, 0);
   animation: tagGrowWidth 0.8s ease-in-out forwards,
