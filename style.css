@@ -92,7 +92,9 @@ main.active {
   display: flex;
 }
 
-.tag-section2.apear {
+.tag-section2.apear,
+.tag-section3.apear,
+.tag-section4.apear {
   opacity: 1;
 }
 
