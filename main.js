@@ -10,6 +10,9 @@ let pitAndTitle = document.querySelector(".tag-pitAndTitle");
 let paragraphInMainTag = document.querySelector(".tag-paragraph");
 let hiddenTitle = document.querySelector(".title-hidden");
 
+// Main Grow //
+// Main Grow //
+// Main Grow //
 function clickBarCode() {
   Main.classList.toggle("active");
   HiddenContainer.classList.toggle("active");
@@ -24,45 +27,40 @@ function clickBarCode() {
   title.classList.toggle("active");
   hiddenTitle.classList.toggle("active");
 }
-
 barCode.addEventListener("click", clickBarCode);
 
-// section scroll setup //
-// section scroll setup //
-// section scroll setup //
+// Section Scroll Setup //
+// Section Scroll Setup //
+// Section Scroll Setup //
 addEventListener("scroll", function () {
-  let absoluteTop1 = tagSection[0].getBoundingClientRect().top;
-  let absoluteTop2 = tagSection[1].getBoundingClientRect().top;
-  let absoluteTop3 = tagSection[2].getBoundingClientRect().top;
-  let absoluteTop4 = tagSection[3].getBoundingClientRect().top;
+  let absoluteTop1 = tagSection[0].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop2 = tagSection[1].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop3 = tagSection[2].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop4 = tagSection[3].getBoundingClientRect().top.toFixed(0);
 
-  if (absoluteTop1.toFixed(0) > 0) {
+  if (absoluteTop1 > 0) {
     HTML.classList.remove("snap");
   }
 });
 // section 1
 addEventListener("scroll", function () {
-  let absoluteTop1 = tagSection[0].getBoundingClientRect().top;
-  let absoluteTop2 = tagSection[1].getBoundingClientRect().top;
-  let absoluteTop3 = tagSection[2].getBoundingClientRect().top;
-  let absoluteTop4 = tagSection[3].getBoundingClientRect().top;
+  let absoluteTop1 = tagSection[0].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop2 = tagSection[1].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop3 = tagSection[2].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop4 = tagSection[3].getBoundingClientRect().top.toFixed(0);
 
-  console.log(tagSection[0].getBoundingClientRect().top);
-  console.log(tagSection[1].getBoundingClientRect().top);
-  console.log(tagSection[2].getBoundingClientRect().top);
-  console.log(tagSection[3].getBoundingClientRect().top);
-
-  if (absoluteTop1.toFixed(0) <= 0 && absoluteTop2.toFixed(0) > 0) {
-    HTML.classList.add("snap");
+  if (absoluteTop1 <= 0 && absoluteTop2 > 0) {
     tagSection[1].classList.remove("apear");
+    tagSection[2].classList.remove("apear");
+    tagSection[3].classList.remove("apear");
   }
 });
 // section 2
 addEventListener("scroll", function () {
-  let absoluteTop1 = tagSection[0].getBoundingClientRect().top;
-  let absoluteTop2 = tagSection[1].getBoundingClientRect().top;
-  let absoluteTop3 = tagSection[2].getBoundingClientRect().top;
-  let absoluteTop4 = tagSection[3].getBoundingClientRect().top;
+  let absoluteTop1 = tagSection[0].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop2 = tagSection[1].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop3 = tagSection[2].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop4 = tagSection[3].getBoundingClientRect().top.toFixed(0);
 
   if (absoluteTop1 <= (absoluteTop2 - absoluteTop1) / 2) {
     HTML.classList.add("snap");
@@ -73,10 +71,10 @@ addEventListener("scroll", function () {
 });
 // section 3
 addEventListener("scroll", function () {
-  let absoluteTop1 = tagSection[0].getBoundingClientRect().top;
-  let absoluteTop2 = tagSection[1].getBoundingClientRect().top;
-  let absoluteTop3 = tagSection[2].getBoundingClientRect().top;
-  let absoluteTop4 = tagSection[3].getBoundingClientRect().top;
+  let absoluteTop1 = tagSection[0].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop2 = tagSection[1].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop3 = tagSection[2].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop4 = tagSection[3].getBoundingClientRect().top.toFixed(0);
 
   if (absoluteTop3 <= (absoluteTop2 - absoluteTop1) / 2) {
     HTML.classList.add("snap");
@@ -87,10 +85,10 @@ addEventListener("scroll", function () {
 });
 // section 4
 addEventListener("scroll", function () {
-  let absoluteTop1 = tagSection[0].getBoundingClientRect().top;
-  let absoluteTop2 = tagSection[1].getBoundingClientRect().top;
-  let absoluteTop3 = tagSection[2].getBoundingClientRect().top;
-  let absoluteTop4 = tagSection[3].getBoundingClientRect().top;
+  let absoluteTop1 = tagSection[0].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop2 = tagSection[1].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop3 = tagSection[2].getBoundingClientRect().top.toFixed(0);
+  let absoluteTop4 = tagSection[3].getBoundingClientRect().top.toFixed(0);
 
   if (absoluteTop4 <= (absoluteTop4 - absoluteTop3) / 2) {
     tagSection[1].classList.remove("apear");
