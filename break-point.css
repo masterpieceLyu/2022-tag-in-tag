@@ -1,0 +1,149 @@
+@media screen and (max-width: 1199px) {
+  .carousel {
+    border-radius: 55px 300px 55px 55px;
+    overflow: hidden;
+  }
+
+  .tag-section4 .container-contents {
+    border-radius: 0 0 120px 400px;
+  }
+
+  @keyframes tagGrowWidth {
+    from {
+    }
+
+    to {
+      width: 93%;
+      border-radius: 120px 400px 120px 120px;
+    }
+  }
+
+  @keyframes tagGrowHeight {
+    from {
+    }
+    to {
+      height: 400vh;
+      border-radius: 120px 400px 120px 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .carousel {
+    border-radius: 55px 300px 55px 55px;
+    overflow: hidden;
+  }
+
+  .tag-section4 .container-contents {
+    border-radius: 0 0 120px 350px;
+  }
+
+  @keyframes tagGrowWidth {
+    from {
+    }
+
+    to {
+      width: 93%;
+      border-radius: 120px 350px 120px 120px;
+    }
+  }
+
+  @keyframes tagGrowHeight {
+    from {
+    }
+    to {
+      height: 400vh;
+      border-radius: 120px 350px 120px 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .carousel {
+    border-radius: 55px 300px 55px 55px;
+    overflow: hidden;
+  }
+
+  .tag-section4 .container-contents {
+    border-radius: 0 0 100px 300px;
+  }
+
+  @keyframes tagGrowWidth {
+    from {
+    }
+
+    to {
+      width: 93%;
+      border-radius: 100px 300px 100px 100px;
+    }
+  }
+
+  @keyframes tagGrowHeight {
+    from {
+    }
+    to {
+      height: 400vh;
+      border-radius: 100px 300px 100px 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    border-radius: 55px 300px 55px 55px;
+    overflow: hidden;
+  }
+
+  .tag-section4 .container-contents {
+    border-radius: 0 0 70px 250px;
+  }
+
+  @keyframes tagGrowWidth {
+    from {
+    }
+
+    to {
+      width: 93%;
+      border-radius: 70px 250px 70px 70px;
+    }
+  }
+
+  @keyframes tagGrowHeight {
+    from {
+    }
+    to {
+      height: 400vh;
+      border-radius: 70px 250px 70px 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .carousel {
+    border-radius: 55px 300px 55px 55px;
+    overflow: hidden;
+  }
+
+  .tag-section4 .container-contents {
+    border-radius: 0 0 50px 200px;
+  }
+
+  @keyframes tagGrowWidth {
+    from {
+    }
+
+    to {
+      width: 93%;
+      border-radius: 50px 200px 50px 50px;
+    }
+  }
+
+  @keyframes tagGrowHeight {
+    from {
+    }
+    to {
+      height: 400vh;
+      border-radius: 50px 200px 50px 200px;
+    }
+  }
+}
