@@ -59,17 +59,17 @@ addEventListener("scroll", function () {
     HTML.classList.add("snap");
     section2span.style.animation = "slideText 0.8s 0.8s ease-in-out forwards";
     section2contents[0].style.animation =
-      "slideContents 1.3s 3.1s ease-out forwards";
+      "slideContents 1.1s 2.3s ease-out forwards";
     section2contents[1].style.animation =
-      "slideContents 1.3s 3.4s ease-out forwards";
+      "slideContents 1.1s 2.7s ease-out forwards";
     section2contents[2].style.animation =
-      "slideContents 1.3s 3.7s ease-out forwards";
+      "slideContents 1.1s 3s ease-out forwards";
     section2contents[3].style.animation =
-      "slideContents 1.3s 4s ease-out forwards";
+      "slideContents 1.1s 3.3s ease-out forwards";
     boxLine[0].style.animation =
-      "box1Apear 0.7s 1.6s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+      "box1Apear 0.5s 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
     boxLine[1].style.animation =
-      "box2Apear 0.7s 2.1s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+      "box2Apear 0.5s 1.7s cubic-bezier(0.85, 0, 0.15, 1) forwards";
   }
 });
 // section 3

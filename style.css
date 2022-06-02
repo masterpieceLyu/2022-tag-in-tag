@@ -302,7 +302,7 @@ main.active {
   position: relative;
   display: flex !important;
   flex-direction: column !important;
-  margin: 0 10px;
+  margin: 0 1rem;
   border: 2px solid rgba(0, 0, 0, 0.2) !important;
   opacity: 0;
   background: var(--colorPurple);
@@ -341,6 +341,9 @@ main.active {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 
 .tag-section3 .container-span {
@@ -385,13 +388,12 @@ main.active {
   justify-content: center;
   align-items: center;
   padding: 0;
-  width: 18rem;
-  margin: 20px;
-  border-radius: 5% !important;
+  margin: 1rem;
+  border-radius: 1rem !important;
   box-sizing: border-box;
-  overflow: scroll;
   border: 2px solid transparent;
   opacity: 0;
+  overflow: hidden;
   background: var(--colorPurple) !important;
   transition: 0.5s ease-in-out;
 }
@@ -401,10 +403,12 @@ main.active {
 }
 
 .tag-section3 .container-contents .card > img {
+  border-radius: 1rem 1rem 0 0 !important;
   transition: 0.2s ease-in-out;
 }
 
 .tag-section3 .container-contents .col-md-2 .card {
+  border-radius: 1rem !important;
   transition: 0.4s ease-in-out;
 }
 
@@ -612,8 +616,8 @@ main.active {
 
 @keyframes box1Apear {
   from {
-    top: 200px;
-    left: 200px;
+    top: 130px;
+    left: 130px;
     opacity: 0;
   }
   to {
@@ -625,8 +629,8 @@ main.active {
 
 @keyframes box2Apear {
   from {
-    bottom: 200px;
-    right: 200px;
+    bottom: 130px;
+    right: 130px;
     opacity: 0;
   }
   to {
