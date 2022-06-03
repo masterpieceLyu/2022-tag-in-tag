@@ -4,6 +4,10 @@
   /* before : #5e02ba */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html.snap {
   scroll-snap-type: y mandatory;
 }
@@ -336,112 +340,34 @@ main.active {
 }
 
 /* section3 */
-
-.tag-section3 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  overflow-x: scroll;
+.tag-section3 {
+  width: 100vw;
+  height: 100vh;
   white-space: nowrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
-.tag-section3 .container-span {
+.contents-wraper {
+  width: 100vw;
+}
+
+.tag-section3 .section {
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
   position: relative;
-  justify-content: left;
-  margin-left: 10vh;
-  padding: 50px;
-  opacity: 0;
 }
 
-.tag-section3 .container-span .col-md h2 {
-  text-align: left;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.tag-section3 .container-span .col-md strong {
-  font-size: 34px;
-  color: var(--colorPurple);
-}
-
-.tag-section3 .container-span .col-md p {
-  font-size: 18px;
-}
-
-.tag-section3 .container-contents {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.tag-section3 .container-contents .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tag-section3 .container-contents .col-md-2 {
-  position: relative;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 1rem;
-  border-radius: 1rem !important;
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  opacity: 0;
-  overflow: hidden;
-  background: var(--colorPurple) !important;
-  transition: 0.5s ease-in-out;
-}
-
-.tag-section3 .container-contents .col-md-2 .card-body {
-  background: var(--colorPurple) !important;
-}
-
-.tag-section3 .container-contents .card > img {
-  border-radius: 1rem 1rem 0 0 !important;
-  transition: 0.2s ease-in-out;
-}
-
-.tag-section3 .container-contents .col-md-2 .card {
-  border-radius: 1rem !important;
-  transition: 0.4s ease-in-out;
-}
-
-.tag-section3 .container-contents .col-md-2:hover {
-  cursor: pointer;
-  transform: scale(1.03);
-}
-
-.tag-section3 .container-contents .col-md-2:hover > .card > img {
-  filter: blur(1px);
-  border: none;
-}
-
-.tag-section3 .card {
-  border: none !important;
-}
-
-.tag-section3 .card img {
-  width: 100% !important;
-}
-
-.tag-section3 .card h2 {
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 10px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.tag-section3 .card p {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+.tag-section3 .section div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50% 50%);
+  font-size: 100px;
+  color: black;
 }
 
 /* section4 */
