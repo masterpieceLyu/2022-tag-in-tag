@@ -244,42 +244,45 @@ main.active {
 
 .tag-section2 .container-span {
   position: absolute;
-  top: 5vh;
+  top: 10vh;
   text-align: left;
   font-size: 28px;
-  padding: 50px;
   opacity: 0;
 }
 
-.box-line:first-child {
+.tag-section2 .container-span .col-md-10 {
+  position: relative;
+  padding: 90px;
+}
+
+.tag-section2 .container-span .row .box-line:first-child {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 15vh;
-  width: 130px;
+  width: 180px;
   height: 130px;
   opacity: 0;
   border-top: 8px solid var(--colorPurple);
   border-left: 8px solid var(--colorPurple);
 }
 
-.box-line:nth-child(2) {
+.tag-section2 .container-span .row .box-line:nth-child(2) {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 130px;
-  height: 130px;
+  height: 180px;
   opacity: 0;
   border-bottom: 8px solid var(--colorPurple);
   border-right: 8px solid var(--colorPurple);
 }
 
-.tag-section2 .container-span .col-md h2 {
+.tag-section2 .container-span .col-md-10 h2 {
   font-size: 34px;
   margin-bottom: 20px;
 }
 
-.tag-section2 .container-span .col-md p {
+.tag-section2 .container-span .col-md-10 p {
   font-size: 18px;
 }
 
@@ -306,7 +309,7 @@ main.active {
   position: relative;
   display: flex !important;
   flex-direction: column !important;
-  margin: 0 1rem;
+  margin: 1rem 1rem;
   border: 2px solid rgba(0, 0, 0, 0.2) !important;
   opacity: 0;
   background: var(--colorPurple);
@@ -314,7 +317,8 @@ main.active {
 }
 
 .tag-section2 .container-contents .col-md:hover {
-  transform: scaleY(1.1) scaleX(1.05);
+  transform: scale(1.1);
+  background: var(--colorPurple-light);
   cursor: pointer;
 }
 
@@ -341,33 +345,136 @@ main.active {
 
 /* section3 */
 .tag-section3 {
-  width: 100vw;
+  position: relative;
+  width: 93vw;
   height: 100vh;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
 }
 
 .contents-wraper {
-  width: 100vw;
+  width: 93vw;
+  height: 60vh;
+  position: absolute;
+  bottom: 3rem;
+  white-space: nowrap;
 }
 
-.tag-section3 .section {
-  width: 100vw;
-  height: 100vh;
-  display: inline-block;
+.tag-section3 .container-span {
+  position: absolute;
+  justify-content: left;
+  top: 10vh;
+  opacity: 0;
+}
+
+.tag-section3 .container-span > .row > .col-md-10 {
+  padding: 90px;
   position: relative;
 }
 
-.tag-section3 .section div {
+.tag-section3 .container-span > .row > .col-md-10 > .box-line:first-child {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(50% 50%);
-  font-size: 100px;
-  color: black;
+  bottom: 0;
+  left: 0;
+  width: 180px;
+  height: 130px;
+  opacity: 0;
+  border-bottom: 8px solid var(--colorPurple);
+  border-left: 8px solid var(--colorPurple);
+}
+
+.tag-section3 .container-span > .row > .col-md-10 > .box-line:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 180px;
+  opacity: 0;
+  border-top: 8px solid var(--colorPurple);
+  border-right: 8px solid var(--colorPurple);
+}
+
+.tag-section3 .container-span .col-md-10 h2 {
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.tag-section3 .container-span .col-md-10 strong {
+  font-size: 34px;
+  color: var(--colorPurple);
+}
+.tag-section3 .container-span .col-md-10 p {
+  font-size: 18px;
+}
+
+.tag-section3 .section {
+  width: 93vw;
+  height: 60vh;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  overflow-y: hidden;
+  scroll-snap-align: start;
+}
+
+.tag-section3 .card-wraper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag-section3 .section .section-num {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  font-size: 60px;
+  color: var(--colorPurple);
+}
+
+.tag-section3 .card {
+  width: 18rem;
+  height: auto;
+  margin: 1rem;
+  border-radius: none !important;
+  transition: 0.4s ease-in-out;
+}
+
+.tag-section3 .card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.tag-section3 .card-body {
+  background: var(--colorPurple) !important;
+}
+
+.tag-section3 .card > img {
+  width: 100% !important;
+  border-radius: none !important;
+  transition: 0.2s ease-in-out;
+}
+
+.tag-section3 .card:hover > img {
+  filter: blur(1px);
+  border: none;
+}
+
+.tag-section3 .card h2 {
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.tag-section3 .card p {
+  width: 100%;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* section4 */
@@ -471,10 +578,9 @@ main.active {
 .tag-section4 .container-contents a {
   position: absolute;
   right: 0;
-  bottom: 50%;
-  transform: translate(50%, 50%);
-  padding: 30px;
-  margin-right: 5rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
   font-size: 30px;
   color: white;
   text-decoration: none;
@@ -561,6 +667,32 @@ main.active {
   }
   to {
     bottom: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes box3Apear {
+  from {
+    bottom: 130px;
+    left: 130px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes box4Apear {
+  from {
+    top: 130px;
+    right: 130px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
     right: 0;
     opacity: 1;
   }

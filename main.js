@@ -79,13 +79,14 @@ addEventListener("scroll", function section3() {
   let absoluteTop3 = tagSection[2].getBoundingClientRect().top.toFixed(0);
   let absoluteTop4 = tagSection[3].getBoundingClientRect().top.toFixed(0);
 
-  // let section3span = document.querySelector(".section3span");
-  // let section3contents = document.querySelectorAll(".section3contents");
+  let section3span = document.querySelector(".section3span");
+  let section3contents = document.querySelectorAll(".section3contents");
+  let boxLine = document.querySelectorAll(".box-line");
 
   if (absoluteTop3 <= (absoluteTop2 - absoluteTop1) / 2) {
     HTML.classList.add("snap");
 
-    // section3span.style.animation = "slideText 0.8s 0.8s ease-in-out forwards";
+    section3span.style.animation = "slideText 0.8s 0.8s ease-in-out forwards";
     // section3contents[0].style.animation =
     //   "slideContents 1.3s 1.5s ease-out forwards";
     // section3contents[1].style.animation =
@@ -102,6 +103,10 @@ addEventListener("scroll", function section3() {
     //   "slideContents 1.3s 2.8s ease-out forwards";
     // section3contents[7].style.animation =
     //   "slideContents 1.3s 3s ease-out forwards";
+    boxLine[2].style.animation =
+      "box3Apear 0.5s 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+    boxLine[3].style.animation =
+      "box4Apear 0.5s 1.7s cubic-bezier(0.85, 0, 0.15, 1) forwards";
   }
 });
 // section 4
@@ -132,21 +137,3 @@ function scrollToTop() {
 }
 
 goToTopBtn.addEventListener("click", scrollToTop);
-
-(function () {
-  function scrollH(e) {
-    // Prevent scroll default
-    e.preventDefault();
-    e = window.event || e;
-    let delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
-    document.querySelector(".tag-section3").scrollLeft -= delta * 25;
-  }
-  if (document.querySelector(".tag-section3").addEventListener) {
-    document
-      .querySelector(".tag-section3")
-      .addEventListener("mousewheel", scrollH, false);
-    document
-      .querySelector(".tag-section3")
-      .addEventListener("DOMMouseScroll", scrollH, false);
-  }
-})();
