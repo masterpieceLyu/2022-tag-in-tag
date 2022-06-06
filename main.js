@@ -1,6 +1,11 @@
 const HTML = document.querySelector("html");
 const Main = document.querySelector("#main");
 const HiddenContainer = document.querySelector(".tag-hidden_container");
+const pageWidth = document.documentElement.scrollWidth;
+const pageHeight = document.documentElement.scrollHeight;
+
+console.log(pageWidth);
+console.log(pageHeight);
 let tagSection = document.querySelectorAll(".tag-section");
 let barCode = document.querySelector(".barcode");
 let tag = document.querySelector(".tag");
@@ -59,17 +64,17 @@ addEventListener("scroll", function () {
     HTML.classList.add("snap");
     section2span.style.animation = "slideText 0.8s 0.8s ease-in-out forwards";
     section2contents[0].style.animation =
-      "slideContents 1.1s 2.3s ease-out forwards";
+      "slideContents 1.1s 2.9s ease-out forwards";
     section2contents[1].style.animation =
-      "slideContents 1.1s 2.7s ease-out forwards";
+      "slideContents 1.1s 3.2s ease-out forwards";
     section2contents[2].style.animation =
-      "slideContents 1.1s 3s ease-out forwards";
+      "slideContents 1.1s 3.5s ease-out forwards";
     section2contents[3].style.animation =
-      "slideContents 1.1s 3.3s ease-out forwards";
+      "slideContents 1.1s 3.9s ease-out forwards";
     boxLine[0].style.animation =
-      "box1Apear 0.5s 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+      "boxLinegrow1 0.7s 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
     boxLine[1].style.animation =
-      "box2Apear 0.5s 1.7s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+      "boxLinegrow2 0.7s 2.0s cubic-bezier(0.85, 0, 0.15, 1) forwards";
   }
 });
 // section 3
@@ -79,36 +84,62 @@ addEventListener("scroll", function section3() {
   let absoluteTop3 = tagSection[2].getBoundingClientRect().top.toFixed(0);
   let absoluteTop4 = tagSection[3].getBoundingClientRect().top.toFixed(0);
 
-  let section3span = document.querySelector(".section3span");
-  let section3contents = document.querySelectorAll(".section3contents");
-  let boxLine = document.querySelectorAll(".box-line");
+  let spanSlide = document.querySelectorAll(".forSlide");
+  let section3Card = document.querySelectorAll(".section3Card");
+
+  let section3boxline = document.querySelectorAll(".section3-box-line");
+  let arrow = document.querySelectorAll(".arrow");
+  let sectionNum = document.querySelectorAll(".section-num");
 
   if (absoluteTop3 <= (absoluteTop2 - absoluteTop1) / 2) {
     HTML.classList.add("snap");
 
-    section3span.style.animation = "slideText 0.8s 0.8s ease-in-out forwards";
-    // section3contents[0].style.animation =
-    //   "slideContents 1.3s 1.5s ease-out forwards";
-    // section3contents[1].style.animation =
-    //   "slideContents 1.3s 1.8s ease-out forwards";
-    // section3contents[2].style.animation =
-    //   "slideContents 1.3s 2s ease-out forwards";
-    // section3contents[3].style.animation =
-    //   "slideContents 1.3s 2.2s ease-out forwards";
-    // section3contents[4].style.animation =
-    //   "slideContents 1.3s 2.4s ease-out forwards";
-    // section3contents[5].style.animation =
-    //   "slideContents 1.3s 2.6s ease-out forwards";
-    // section3contents[6].style.animation =
-    //   "slideContents 1.3s 2.8s ease-out forwards";
-    // section3contents[7].style.animation =
-    //   "slideContents 1.3s 3s ease-out forwards";
-    boxLine[2].style.animation =
-      "box3Apear 0.5s 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
-    boxLine[3].style.animation =
-      "box4Apear 0.5s 1.7s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+    spanSlide[0].style.animation =
+      "slideText_section3 0.8s 0.8s ease-in-out forwards";
+    spanSlide[1].style.animation =
+      "slideText_section3 0.8s 0.8s ease-in-out forwards";
+    spanSlide[2].style.animation =
+      "slideText_section3 0.8s 0.8s ease-in-out forwards";
+
+    section3boxline[0].style.animation =
+      "boxLinegrow3 1s 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+    arrow[0].style.animation =
+      "arrowGrow 0.7s 2.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+    arrow[1].style.animation =
+      "arrowGrow 0.7s 2.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+    sectionNum[0].style.animation =
+      "slidetotop 0.7s 2.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+    sectionNum[1].style.animation =
+      "slidetotop 0.7s 2.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+    sectionNum[2].style.animation =
+      "slidetotop 0.7s 2.5s cubic-bezier(0.85, 0, 0.15, 1) forwards";
+
+    section3Card[0].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[1].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[2].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[3].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[4].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[5].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[6].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[7].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[8].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[9].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[10].style.animation = "slideContents 1.3s 3.3s ease forwards";
+    section3Card[11].style.animation = "slideContents 1.3s 3.3s ease forwards";
   }
 });
+
+//// Arrow click scroll event
+// const pageWidth = document.documentElement.scrollWidth;
+// const pageHeight = document.documentElement.scrollHeight;
+// const section3wraper = document.querySelector(".contents-wraper");
+// let arrow = document.querySelector(".arrow");
+
+// function clickarrow() {
+//   section3wraper.scrollTo({ left: pageWidth, behavior: "smooth" });
+// }
+// arrow.addEventListener("click", clickarrow);
+
 // section 4
 addEventListener("scroll", function () {
   let absoluteTop1 = tagSection[0].getBoundingClientRect().top.toFixed(0);
@@ -118,11 +149,14 @@ addEventListener("scroll", function () {
 
   let section4map = document.querySelector(".section4map");
   let section4copy = document.querySelector(".section4copy");
+  let bgApear = document.querySelector(".last_section-bg ");
 
   if (absoluteTop4 <= (absoluteTop4 - absoluteTop3) / 2) {
-    section4map.style.animation = "slideContents 1s 0.8s ease-in-out forwards";
+    section4map.style.animation =
+      "slideContents 1s 0.8s cubic-bezier(0.85, 0, 0.15, 1) forwards";
     section4copy.style.animation =
       "container-apear 1s 0.8s ease-in-out forwards";
+    bgApear.style.animation = "lastsectionBGapear 1.2s 1.8s ease forwards ";
   }
 });
 
