@@ -4,6 +4,10 @@
   /* before : #5e02ba */
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
